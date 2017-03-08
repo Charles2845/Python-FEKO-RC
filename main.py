@@ -4,7 +4,8 @@ __author__ = 'Jiacy'
 import math
 import os
 import re
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 class DealWithRcData():
 
@@ -100,19 +101,19 @@ class DealWithRcData():
         print 'Z series:' + str(self.XMax)
         print 'Y series:' + str(self.YMax)
         print 'Z series:' + str(self.ZMax)
-    #     point = ('1','2','3','4','5','6','7','8')
-    #     data = [np.array(self.XMax),np.array(self.YMax),np.array(self.ZMax)]
-    #     x = np.arange(len(point))
-    #     plt.figure()
-    #     ax = plt.axes([0.16,0.12,0.77,0.77])
-    #
-    #     ax.barh(x,data[2],align='center',color='g',alpha=0.5)
-    #
-    #     plt.ylim(-1,8)
-    #     plt.xlabel(u'归一化场强')
-    #     plt.ylabel('8 point of workspace')
-    #     ax.set_yticks(x)
-    #     ax.set_yticklabels(point)
+        # point = ('1','2','3','4','5','6','7','8')
+        # data = [np.array(self.XMax),np.array(self.YMax),np.array(self.ZMax)]
+        # x = np.arange(len(point))
+        # plt.figure()
+        # ax = plt.axes([0.16,0.12,0.77,0.77])
+        #
+        # ax.barh(x,data[2],align='center',color='g',alpha=0.5)
+        #
+        # plt.ylim(-1,8)
+        # plt.xlabel(u'归一化场强')
+        # plt.ylabel('8 point of workspace')
+        # ax.set_yticks(x)
+        # ax.set_yticklabels(point)
 
         # plt.show()
 
@@ -123,11 +124,11 @@ class DealWithRcData():
             self.DealWithData()
             self.displayData()
 
-        # y = [2.46231582774,3.00115974281,2.06402042458]
-        # x = ['x','y','z']
-        # plt.bar(np.arange(len(y)),y)
-        # plt.xticks([0.5,1.5,2.5],x)
-        # plt.show()
+        y = [2.58,2.0071,2.1933]
+        x = ['x','y','z']
+        plt.bar(np.arange(len(y)),y)
+        plt.xticks([0.5,1.5,2.5],x)
+        plt.show()
 
 
 def main():
